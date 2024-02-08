@@ -10,7 +10,11 @@ COPY ./actualapp /usr/share/nginx/html
 # Copy Nginx configuration
 COPY default.conf /etc/nginx/conf.d/default.conf
 
-RUN apt-get update && apt-get install -y docker docker-compose nano# Expose the port Nginx listens on
+RUN apt-get update && apt-get install -y \
+    nano \
+    docker-compose \
+    docker \
+
 EXPOSE 80
 
 # Start Nginx when the container runs
