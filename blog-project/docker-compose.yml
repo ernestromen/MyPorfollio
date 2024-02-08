@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:80"
     volumes:
-      - ./actualapp:/usr/share/nginx/html
+      - ./actualapp:/usr/share/nginx/html/actualapp
   mysql_db:
     image: mysql:latest
     restart: always
