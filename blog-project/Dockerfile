@@ -10,11 +10,9 @@ COPY ./actualapp /usr/share/nginx/html
 # Copy Nginx configuration
 COPY default.conf /etc/nginx/conf.d/default.conf
 
-RUN apt-get update && apt-get install -y
-RUN apt-get install docker 
-RUN apt-get install docker-compose 
-RUN apt-get install nano 
-
+RUN apt-get update && \
+    apt-get install -y docker && \
+    docker-compose nano
 EXPOSE 80
 
 # Start Nginx when the container runs
