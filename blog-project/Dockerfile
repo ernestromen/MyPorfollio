@@ -13,7 +13,7 @@ COPY default.conf /etc/nginx/conf.d/default.conf
 RUN apt-get update && \
     apt-get install -y docker && \
     apt-get install -y docke-compose  && \
-    apt-get install -y nano && \
+    apt-get install -y nano
 EXPOSE 80
 
 # Start Nginx when the container runs
