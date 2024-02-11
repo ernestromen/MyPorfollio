@@ -2,10 +2,10 @@
 FROM nginx:1.18.0
 
 # Set the working directory in the container
-WORKDIR /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html/actualapp
 
 # Copy your PHP application code into the container
-COPY ./actualapp /usr/share/nginx/html
+COPY ./actualapp /usr/share/nginx/html/actualapp
 
 # Copy Nginx configuration
 COPY default.conf /etc/nginx/conf.d/default.conf
